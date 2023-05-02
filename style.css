@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    max-width: min(80vw, 1200px);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    font-size: 1.2rem;
+}
+
+header > ul{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+header > button{
+    padding: 10px 15px;
+    background-color: #007400;
+    border: none;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+header > ul > li{
+    list-style: none;
+}
+
+/* main */
+.container{
+    position: relative;
+    width: 100%;
+}
+.container > img{
+    position: absolute;
+    width: 100%;
+    min-width: 600px;
+    z-index: -1;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
