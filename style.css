@@ -1,10 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    /* color: rgb(11, 11, 11); */
+    scroll-behavior: smooth;  
 }
 
-header{
+header {
     max-width: min(80vw, 1200px);
     margin-inline: auto;
     display: flex;
@@ -13,37 +16,476 @@ header{
     justify-content: space-between;
     padding: 25px 0;
     font-size: 1.2rem;
+    padding: 20px 20px;
 }
 
-header > ul{
+header>ul {
     display: flex;
     width: 400px;
     justify-content: space-between;
 }
 
-header > button{
-    padding: 10px 15px;
+header>button {
+    padding: .7em 1em;
     background-color: #007400;
     border: none;
     color: #ffffff;
     border-radius: 12px;
-    font-size: 1rem;
+    font-size: clamp(.8rem, 2vw, 1rem);
+    cursor: pointer;
 }
 
-header > ul > li{
+header>ul>li {
     list-style: none;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+header>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+header>ul>li::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #007400;
+    bottom: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+    transform-origin: left;
+}
+
+header>ul>li:hover{
+    color: #007400;
+}
+
+header>ul>li:hover::after{
+    width: 100%;
 }
 
 /* main */
-.container{
+
+.main {
+    min-height: 70vh;
+    background-image: url(./images/New_Background_Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.container {
+    max-width: min(80vw, 1200px);
+    min-height: 500px;
+    margin-inline: auto;
+    padding: 5% 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.merriweather {
+    font-family: 'Merriweather', serif;
+}
+
+.container h2 {
+    font-size: clamp(3.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+}
+
+.container h3 {
+    font-size: 1.2rem;
+    letter-spacing: .2em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.container h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 2.1rem;
+}
+
+.container h4>span {
+    color: #007400;
+    letter-spacing: 4px;
+}
+
+.container p {
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: .9rem;
+}
+
+.container button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #007400;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/* secondary section */
+
+.secondary_section {
+    padding: 2%;
+    text-align: center;
+}
+
+.secondary_section h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.secondary_section h1 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #007400;
+    font-weight: 300;
+    display: inline-block;
     position: relative;
+}
+
+.secondary_section h1::after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    background-color: #007400;
+}
+
+.secondary_section>div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, .20);
+    margin: 10px 15px;
+    border-radius: 20px;
+    min-width: 251px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.png_imgaes {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.promise_section {
+    width: 100%;
+    padding: 2%;
+    background-color: #d9fae0;
+    text-align: center;
+    border-top: 2px dashed #007400;
+    border-bottom: 2px dashed #007400
+}
+
+.promise_section p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.promise_section h2 {
+    font-size: 1.8rem;
+    color: #007400;
+}
+
+/* detail_section */
+
+.detail_section {
+    width: 100%;
+    padding: 2%;
+    border-bottom: 2px solid #007400;
+}
+
+.detail_section h4 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.detail_section>div {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.deatil_card {
+    width: 300px;
+    padding-bottom: 25px;
+}
+
+.deatil_card h2 {
+    text-align: center;
+    position: relative;
+    display: inline-block;
     width: 100%;
 }
-.container > img{
+
+.deatil_card p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.deatil_card h2::after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    background-color: #007400;
+}
+
+.about_section {
+    padding-top: 30px;
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.about_section>div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.about_section>h4 {
+    text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.about_section>h4::after{
+    content: ' ';
     position: absolute;
     width: 100%;
-    min-width: 600px;
-    z-index: -1;
-    border-bottom-left-radius: 80px;
-    border-bottom-right-radius: 80px;
+    height: 2px;
+    background-color: rgb(11, 11, 11);
+    bottom: -2px;
+    left: 0;
+}
+
+.about_section>div>img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.about {
+    width: 450px;
+    padding: 20px 20px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007400;
+}
+
+.about h2::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #007400;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.note_section {
+    width: 100%;
+    margin-inline: auto;
+    padding: 40px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    text-align: center;
+    background-color: #d9fae0;
+}
+
+.client_review{
+    text-align: center;
+}
+.client_review h3 {
+    padding: 0px 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.client_review h3::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 20px);
+    background-color: #007400;
+    left: 10px;
+    bottom: -4px;
+}
+
+.reviews{
+    max-width : min(600px, 90vw); 
+    min-height : 150px;
+    overflow: hidden;
+    background-color : #fff ;
+    margin : 50px auto ;
+    box-shadow : 1px 1px 20px 8px #ddd ;
+    position: relative;   
+    padding: 0 20px; 
+    border-radius: 15px;     
+}
+
+.left_arrow{
+    position: absolute;
+    left: 12px;
+    width: 45px;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 5;
+}
+
+.right_arrow{
+    position: absolute;
+    right: 12px;
+    width: 45px;
+    bottom: 50%;
+    z-index: 5;
+    transform: translateY(50%) rotate(180deg);
+}
+
+.review_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+
+.reviews_cards {
+    max-width: 600px;
+    height: 100%;
+    padding: 50px 50px;
+    font-size: 1.1rem;
+    flex: 1 0 100%;
+}
+
+.Appointment_section {
+    min-height: 450px;
+    margin-inline: auto;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow:0 0 20px 0px rgb(214 215 217);;
+}
+
+.Appointment_section h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #007400;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.Appointment_section h3::after {
+    content: " ";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #007400;
+    bottom: 0;
+    left: 0;
+}
+
+.Appointment_section P {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.Appointment_section div {
+    padding: 20px 0;
+    max-width: 450px;
+    margin-inline: auto;
+    font-size: 1.1rem;
+}
+
+.Appointment_section>div>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Appointment_section>div>div>input {
+    width: 350px;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+}
+
+.send_appointment{
+    font-size: 1.1rem;
+    background-color: #007400;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+.footer{
+    background-color: #393939;
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width : 840px){
+    header{
+        justify-content: center;
+    }
+    header>button{
+        margin-top: 1em;
+    }
 }

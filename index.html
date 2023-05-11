@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Mubina Healthcare</title>
 </head>
@@ -12,25 +13,111 @@
 <body>
     <header>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="apointment_btn">BOOK AN APPOINTMENT</button>
     </header>
-    <section class="main">
+    <section class="main" id="main">
         <div class="container">
-            <img src="./images//New_Background_Image.jpg" alt="backgroung_img">
-            <div class="main_contant">
-                <h2>Mubina</h2>
-                <h4>Healthcare Center</h4>
-                <h4>We help women in bigger bodies<br>
-                    To Find<span>FOOD FREEDOM</span></h4>
-                <p>Join Our Family & Change Your Life</p>
-                <button>Contact</button>
+            <h2 class="merriweather">Mubina</h2>
+            <h3 class="merriweather">Healthcare Center</h3>
+            <h4>We help women in bigger bodies<br>
+                To Find <span>FOOD FREEDOM</span></h4>
+            <p>Join Our Family & Change Your Life</p>
+            <button>Contact</button>
+        </div>
+    </section>
+    <section class="secondary_section">
+        <h2>Want to loos waight?</h2>
+        <h1>Solution in four easy steps</h1>
+        <div>
+            <div class="card"><img src="./images/contact.png" alt="contactUs" class="png_imgaes">Contact Us</div>
+            <div class="card"><img src="./images/Analysis.png" alt="Analysis" class="png_imgaes">Analysis</div>
+            <div class="card"><img src="./images//Appointment.png" alt="Appointment" class="png_imgaes">Appointment
+            </div>
+            <div class="card"><img src="./images//life.png" alt="life" class="png_imgaes">Happy Life</div>
+        </div>
+    </section>
+    <section class="promise_section">
+        <p>Change Your Life From The Next</p>
+        <h2>90 Days Of Practice</h2>
+        <p>We Will Guarantee, You Will Loose Weight in<br>
+            90 Days</p>
+    </section>
+    <section class="detail_section">
+        <h4>We Will Provide you</h4>
+        <div>
+            <div class="deatil_card">
+                <h2 class="merriweather">Personalized <br> Nutritian Plan</h2>
+                <p>We Will Provide You a full Nutritian Plan
+                    You Should Follow Our Personalized
+                    Nutritian Plan & You will see Diffrence in a month</p>
+            </div>
+            <div class="deatil_card">
+                <h2 class="merriweather">Personalized <br> Exercise Plan</h2>
+                <p>We Will Suggest you Personalized
+                    Exercise Plan, That You should Follow</p>
             </div>
         </div>
     </section>
+    <section class="about_section">
+        <h4>About</h4>
+        <div>
+            <div class="about" id="about">
+                <h2>Dt Mubina</h2>
+                <p>Dt Mubina is Certified Clinical Dietitian &
+                    Health Expert, working at National & International level</p>
+                <p>Dt, Mubina has so far reduced the weight of himself and uncountable patients by 30 to 45 kg without
+                    medicine</p>
+                <p>Dt.Mubina is doing social help in this clinic by providing services for nominal fee with the aim of
+                    helping people from all walks of life to become healthy, beautiful and slim without medicine</p>
+            </div>
+            <img src="./images/kilarov.jpg" alt="about_image">
+        </div>
+    </section>
+    <section class="note_section">
+        Note
+        <p>Before joining this clinic, please know the purpose and rules of the clinic and strictly <br> follow the
+            rules and cooperate</p>
+    </section>
+    <section class="client_review">
+        <h3>Want to Read What Our Clients Says About Us</h3>
+        <div class="reviews">
+            <img class="left_arrow" onclick="slideLeft()" src="./images/left-chevron.png" alt="left_Arrow">
+            <div class="review_container">
+                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
+                    in
+                    just 3 months. I have Followed all your
+                    advice and here i am.Thank You once again for changing my life</div>
+                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
+                    in
+                    just 3 months. I have Followed all your
+                    advice and here i am.Thank You once again for changing my life</div>
+                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
+                    in
+                    just 3 months. I have Followed all your
+                    advice and here i am.Thank You once again for changing my life</div>
+            </div>
+            <img class="right_arrow" onclick="slideRight()" src="./images/left-chevron.png" alt="right_Arrow">
+        </div>
+    </section>
+    <section class="Appointment_section" id="contact">
+        <h3>Make an Appointment</h3>
+        <p>Office Hours : 10:00AM To 5:00Pm</p>
+        <div>
+            <div>Name : <input type="text"></div>
+            <div>Age : <input type="number"></div>
+            <div>Address : <input type="text"></div>
+        </div>
+        <button class="send_appointment">Fix An Appointment</button>
+    </section>
+    <section class="footer">
+        <p>Address :<br>
+            F-13, Sunrise Arcade Vishala Circle, Beside Bank Of Baroda, Above Havemore Ice Cream, Ahmedabad</p>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
