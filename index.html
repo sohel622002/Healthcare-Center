@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
     <link rel="stylesheet" href="style.css">
     <title>Mubina Healthcare</title>
 </head>
@@ -17,7 +21,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="apointment_btn">BOOK AN APPOINTMENT</button>
+        <button class="apointment_btn" onclick='hrefFunction()'>BOOK AN APPOINTMENT</button>
     </header>
     <section class="main" id="main">
         <div class="container">
@@ -85,38 +89,31 @@
     <section class="client_review">
         <h3>Want to Read What Our Clients Says About Us</h3>
         <div class="reviews">
-            <img class="left_arrow" onclick="slideLeft()" src="./images/left-chevron.png" alt="left_Arrow">
+            <img class="left_arrow" onclick="slideLeft()" src="./images/left-chevron.png" draggable="false"
+                alt="left_Arrow">
             <div class="review_container">
-                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
-                    in
-                    just 3 months. I have Followed all your
-                    advice and here i am.Thank You once again for changing my life</div>
-                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
-                    in
-                    just 3 months. I have Followed all your
-                    advice and here i am.Thank You once again for changing my life</div>
-                <div class="reviews_cards">Thank You Mem for Consulting me there is so much diffrence in my body weight
-                    in
-                    just 3 months. I have Followed all your
-                    advice and here i am.Thank You once again for changing my life</div>
             </div>
-            <img class="right_arrow" onclick="slideRight()" src="./images/left-chevron.png" alt="right_Arrow">
+            <img class="right_arrow" onclick="slideRight()" src="./images/left-chevron.png" draggable="false"
+                alt="right_Arrow">
         </div>
     </section>
     <section class="Appointment_section" id="contact">
         <h3>Make an Appointment</h3>
         <p>Office Hours : 10:00AM To 5:00Pm</p>
-        <div>
-            <div>Name : <input type="text"></div>
-            <div>Age : <input type="number"></div>
-            <div>Address : <input type="text"></div>
-        </div>
-        <button class="send_appointment">Fix An Appointment</button>
+        <form id="form">
+            <div>Name : <input id="name_field" type="text" required placeholder="Full Name"></div>
+            <div>Age : <input id="age_field" type="text" maxlength="2" required placeholder="Age"></div>
+            <div>Contact : <input id="contact_email_field" type="text" placeholder="Email Address Or Mobile Number">
+            </div>
+            <div>Address : <input id="address_field" type="text" placeholder="Your Address"></div>
+        </form>
+        <button class="send_appointment" type="submit" onclick="sendEmail()">Fix An Appointment</button>
     </section>
     <section class="footer">
         <p>Address :<br>
             F-13, Sunrise Arcade Vishala Circle, Beside Bank Of Baroda, Above Havemore Ice Cream, Ahmedabad</p>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 

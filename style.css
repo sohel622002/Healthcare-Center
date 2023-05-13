@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     padding: 25px 0;
     font-size: 1.2rem;
-    padding: 20px 20px;
+    padding: 8px 20px;
 }
 
 header>ul {
@@ -71,7 +71,7 @@ header>ul>li:hover::after{
 /* main */
 
 .main {
-    min-height: 70vh;
+    min-height: 84vh;
     background-image: url(./images/New_Background_Image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,6 +384,7 @@ header>ul>li:hover::after{
     bottom: 50%;
     transform: translateY(50%);
     z-index: 5;
+    cursor: pointer;
 }
 
 .right_arrow{
@@ -393,6 +394,7 @@ header>ul>li:hover::after{
     bottom: 50%;
     z-index: 5;
     transform: translateY(50%) rotate(180deg);
+    cursor: pointer;
 }
 
 .review_container{
@@ -446,12 +448,12 @@ header>ul>li:hover::after{
 
 .Appointment_section div {
     padding: 20px 0;
-    max-width: 450px;
+    max-width: 480px;
     margin-inline: auto;
     font-size: 1.1rem;
 }
 
-.Appointment_section>div>div {
+.Appointment_section>form>div {
     width: 100%;
     display: flex;
     align-items: center;
@@ -459,11 +461,15 @@ header>ul>li:hover::after{
     flex-wrap: wrap;
 }
 
-.Appointment_section>div>div>input {
+.Appointment_section>form>div>input {
     width: 350px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 5px 10px;
     border: 1px solid lightgray;
+}
+
+.Appointment_section>form>div>input:focus{
+    outline: 1px solid #007400;
 }
 
 .send_appointment{
@@ -473,6 +479,11 @@ header>ul>li:hover::after{
     border: none;
     padding: 10px 15px;
     border-radius: 12px;
+    cursor: pointer;
+}
+
+.send_appointment:hover{
+    background-color: #009100;
 }
 
 .footer{
